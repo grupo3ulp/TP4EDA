@@ -13,9 +13,7 @@ struct persona{
 };
 
 void cargarPersonas(persona p[]){
-    string n, s;
-    int e;
-    double t;
+    string n;
     for (int i = 0; i < 5; ++i)    {
         cout<<"Ingrese el nombre de la persona"<<endl;
         getline(cin, p[i].nombre);
@@ -25,7 +23,7 @@ void cargarPersonas(persona p[]){
         cin>>p[i].edad;
         cout<<"Ingrese el telefono de la persona"<<endl;
         cin>>p[i].telefono;
-        getline(cin, n);
+        getline(cin, n); //limpia la entrada
         cout<<"----------------------------------------"<<endl;
     }
 }
