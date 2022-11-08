@@ -22,7 +22,7 @@ bool esPrimo(int n) {
 
 }
 
-string mostrarPrimosMenores(int n){
+void mostrarPrimosMenores(int n){
     for (int i = 1; i <= n; ++i) {
         if(esPrimo(i)){
             cout<<"El numero "<<i<<" es primo"<< endl;
