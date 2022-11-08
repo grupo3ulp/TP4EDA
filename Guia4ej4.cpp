@@ -21,28 +21,21 @@ void cumpleanios(fecha fa, fecha fc){
 
 int main() {
     fecha fa, fc;
-    int d, m, a;
     cout<<"Ingresá la fecha actual"<<endl;
     cout<<"Dia: "<<endl;
-    cin>>d;
+    cin>>fa.d;
     cout<<"Mes: "<<endl;
-    cin>>m;
+    cin>>fa.m;
     cout<<"Año: "<<endl;
-    cin>>a;
-    fa.dia = d;
-    fa.mes = m;
-    fa.anio = a;
+    cin>>fa.a;
     cout<<"-----------------------"<<endl;
     cout<<"Ingresá la fecha de tu cumpleaños"<<endl;
     cout<<"Dia: "<<endl;
-    cin>>d;
+    cin>>fc-d;
     cout<<"Mes: "<<endl;
-    cin>>m;
+    cin>>fc.m;
     cout<<"Año: "<<endl;
-    cin>>a;
-    fc.dia = d;
-    fc.mes = m;
-    fc.anio = a;
+    cin>>fc.a;
     cout<<"-----------------------"<<endl;
     cumpleanios(fa, fc);
     return 0;
