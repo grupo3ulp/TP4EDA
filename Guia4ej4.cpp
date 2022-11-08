@@ -11,34 +11,34 @@ struct fecha{
     int anio;
 };
 
-fecha cumpleanios(fecha fa, fecha fc){
+void cumpleanios(fecha fa, fecha fc){
     if(fa.dia == fc.dia && fa.mes == fc.mes){
-        cout<<"Feliz cumpleanios!!, hoy cumplio "<<fa.anio-fc.anio<<" anios"<<endl;
+        cout<<"Feliz cumpleaños!, hoy cumplis "<<fa.anio-fc.anio<<" años"<<endl;
     }else{
-        cout<<"Hoy no es tu cumpleanios :("<<endl;
+        cout<<"Hoy no es tu cumpleaños."<<endl;
     }
 }
 
 int main() {
     fecha fa, fc;
     int d, m, a;
-    cout<<"Ingrese la fecha actual"<<endl;
+    cout<<"Ingresá la fecha actual"<<endl;
     cout<<"Dia: "<<endl;
     cin>>d;
     cout<<"Mes: "<<endl;
     cin>>m;
-    cout<<"Anio: "<<endl;
+    cout<<"Año: "<<endl;
     cin>>a;
     fa.dia = d;
     fa.mes = m;
     fa.anio = a;
     cout<<"-----------------------"<<endl;
-    cout<<"Ingrese la fecha de su cumpleanios"<<endl;
+    cout<<"Ingresá la fecha de tu cumpleaños"<<endl;
     cout<<"Dia: "<<endl;
     cin>>d;
     cout<<"Mes: "<<endl;
     cin>>m;
-    cout<<"Anio: "<<endl;
+    cout<<"Año: "<<endl;
     cin>>a;
     fc.dia = d;
     fc.mes = m;

@@ -1,5 +1,5 @@
-// Ejercicio 3: Hacer una función que reciba un arreglo de estructuras que registra los datos de 5 personas con:
-// Nombre, edad, sexo y teléfono. La función muestra los datos de los mayores a 30 años.
+/*Ejercicio 3: Hacer una función que reciba un arreglo de estructuras que registra los datos de 5 personas con:
+Nombre, edad, sexo y teléfono. La función muestra los datos de los mayores a 30 años.*/
 
 #include <iostream>
 #include <string>
