@@ -9,7 +9,7 @@ struct persona{
     string nombre;
     int edad;
     string sexo;
-    double telefono;
+    unsigned long telefono;
 };
 
 void cargarPersonas(persona p[]){
