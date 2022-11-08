@@ -7,7 +7,7 @@ using namespace std;
 
 struct persona{
     string nombre;
-    int edad;
+    short edad;
     string sexo;
     unsigned long telefono;
 };
