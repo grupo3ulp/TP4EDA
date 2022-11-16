@@ -6,16 +6,10 @@ using namespace std;
 //tipo de datos.
 
 int maximo (int a, int b, int c){
-    int mayor = a;
-    if (b>a){
-        mayor = b;
-        if(c>b){
-            mayor = c;
-        }
-    }else if(c>a){
-        mayor = c;
-    }
-    return mayor;
+    int max = a;
+    if (max<b) max = b;
+    if (max<c) max = c;
+    return max;
 }
 
 int main() {
