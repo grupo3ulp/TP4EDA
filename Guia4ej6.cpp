@@ -8,62 +8,56 @@ using namespace std;
 //Escriba un programa que llame a las funciones en el siguiente orden: carga (para las 2 matrices),
 //muestra (para las 2 matrices), intercambia, muestra (para las 2 matrices).
 
-int cargaMatriz (int matriz1[4][4], int matriz2[4][4], int aux1[], int aux2[]){
-    cout<<"Ingrese los valores de la primera matriz"<<endl;
+void cargaMatriz(int matriz[4][4]) {
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
-            cin>>matriz1[i][j];
-            if(i==j){
-                aux1[i]=matriz1[i][j];
-            }
+            cout << "Ingrese posicion [" << i << "][" << j << "] de la matriz" << endl;
+            cin >> matriz[i][j];
         }
-    }
-
-    cout<<"Ingrese los valores de la segunda matriz"<<endl;
-    for (int i = 0; i < 4; ++i) {
-        for (int j = 0; j < 4; ++j) {
-            cin>>matriz2[i][j];
-            if(i==j){
-                aux2[i]=matriz2[i][j];
-            }
-        }
-    }
-};
-
-int mostrarMatrices (int matriz1[4][4], int matriz2[4][4]){
-    cout<<"Se muestra la primera matriz"<<endl;
-    for (int i = 0; i < 4; ++i) {
-        for (int j = 0; j < 4; ++j) {
-            cout<<matriz1[i][j];
-        }
-        cout<<endl;
-    }
-
-    cout<<"Se muestra la segunda matriz"<<endl;
-    for (int i = 0; i < 4; ++i) {
-        for (int j = 0; j < 4; ++j) {
-            cout<<matriz2[i][j];
-        }
-        cout<<endl;
     }
 }
 
-int intercambioDiagonal (int matriz1[4][4], int matriz2[4][4], int aux1[], int aux2[]){
-    cout<<"Se intercambian las diagonales de las matrices"<<endl;
+void muestraMatriz(int matriz[4][4]) {
     for (int i = 0; i < 4; ++i) {
-        matriz1[i][i]=aux2[i];
+        for (int j = 0; j < 4; ++j) {
+            cout << matriz[i][j] << "_";
+        }
+        cout << endl;
     }
+}
+
+void intercambiaDiagonal(int matriz1[4][4], int matriz2[4][4]) {
+    int aux;
     for (int i = 0; i < 4; ++i) {
-        matriz2[i][i]=aux1[i];
+        aux = matriz1[i][i];
+        matriz1[i][i] = matriz2[i][i];
+        matriz2[i][i] = aux;
     }
+
 }
 
 int main() {
-    int matriz1[4][4], matriz2[4][4], aux1[4], aux2[4];
-    cargaMatriz(matriz1,matriz2,aux1,aux2);
-    mostrarMatrices(matriz1, matriz2);
-    intercambioDiagonal(matriz1,matriz2,aux1,aux2);
-    cout<<"Se muestran las matrices con las diagonales cambiadas"<<endl;
-    mostrarMatrices(matriz1, matriz2);
+    int matriz1[4][4];
+    int matriz2[4][4];
+    cout << "Matriz 1:" << endl;
+    cargaMatriz(matriz1);
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "Matriz 2:" << endl;
+    cargaMatriz(matriz2);
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "Matriz 1 queda:" << endl;
+    muestraMatriz(matriz1);
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "Matriz 2 queda:" << endl;
+    muestraMatriz(matriz2);
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "Intercambiamos diagonales" << endl;
+    intercambiaDiagonal(matriz1, matriz2);
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "Matriz 1 queda:" << endl;
+    muestraMatriz(matriz1);
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "Matriz 2 queda:" << endl;
+    muestraMatriz(matriz2);
     return 0;
 }
