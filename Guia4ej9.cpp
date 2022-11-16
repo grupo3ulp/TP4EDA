@@ -12,7 +12,7 @@ int menor (int matriz[5][5]){
     } while (filas>5 || filas<1);
     filas--;
     menorF=matriz[filas][0];
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 1; i < 5; ++i) {
         if (matriz[filas][i]<menorF){
             menorF=matriz[filas][i];
         }
